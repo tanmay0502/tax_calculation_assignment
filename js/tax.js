@@ -41,9 +41,13 @@ $(document).ready(function() {
             }
         }
     
-        $('#result').html('Your overall income is: ₹' + (totalIncome - tax) + '<br>' + 'After reducing the tax of: ₹' + tax );
+        var incomeAfterTax = (totalIncome - tax).toLocaleString('en-IN'); 
+        var taxAmount = tax.toLocaleString('en-IN'); 
+    
+        $('#result').html('Your overall income is: <span style="color: green">₹' + incomeAfterTax + '</span><br>' + 'After reducing the tax of: <span style="color: red">₹' + taxAmount + '</span>');
         $('#resultModal').show();
     }
+    
     
     
 
@@ -134,33 +138,6 @@ $(document).ready(function() {
         
             function isNumeric(value) {
                 return !isNaN(parseFloat(value)) && isFinite(value);
-            }
-        
-            function calculateTax(grossIncome, extraIncome, deductions, age) {
-                if (!validateInput(grossIncome) || !validateInput(extraIncome) || !validateInput(deductions) || age === '') {
-                    alert('Please fill in all fields with valid values.');
-                    return;
-                }
-            
-                grossIncome = parseFloat(grossIncome) * 100000;
-                extraIncome = parseFloat(extraIncome) * 100000;
-                deductions = parseFloat(deductions) * 100000;
-            
-                var totalIncome = grossIncome + extraIncome - deductions;
-                var tax = 0;
-            
-                if (totalIncome > 800000) {
-                    if (age === '<40') {
-                        tax = 0.3 * (totalIncome - 800000);
-                    } else if (age === '40-60') {
-                        tax = 0.4 * (totalIncome - 800000);
-                    } else if (age === '>=60') {
-                        tax = 0.1 * (totalIncome - 800000);
-                    }
-                }
-            
-                $('#result').html('Your calculated tax is: ₹' + (tax).toFixed(2) + '<br>' + 'Your overall income is: ₹' + (totalIncome - tax).toFixed(2));
-                $('#resultModal').show();
             }
             
             

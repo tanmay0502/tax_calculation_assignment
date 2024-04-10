@@ -106,8 +106,15 @@ button {
     transition: background-color 0.2s ease; 
 }
 
-button:hover{
+button:hover {
     background-color: rgb(235, 34, 84);
+}
+
+#closeModal{
+    padding: 10px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
 }
 
 #resultModal {
@@ -128,7 +135,7 @@ button:hover{
     height: 20px;
     line-height: 20px;
     text-align: center;
-    background-color: #ccc;
+    background-color: #bababa;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;

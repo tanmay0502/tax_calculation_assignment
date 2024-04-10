@@ -57,9 +57,9 @@
                     <label for="age">Age Group</label>
                     <select id="age">
                         <option value="">Select your age group</option>
-                        <option value="<40">&lt;40</option>
-                        <option value="40-60">≥ 40 &amp; &lt; 60</option>
-                        <option value=">=60">≥ 60</option>
+                        <option value="<40">Less than 40(&lt;40)</option>
+                        <option value="40-60">Between 40 to 60(≥ 40 &amp; &lt; 60)</option>
+                        <option value=">=60"> More than 60(≥ 60)</option>
                     </select>
                     <div class="invalid-feedback">This field is mandatory.</div>
                 </div>
@@ -67,9 +67,10 @@
             </div>
         </form>
         <div id="resultModal">
+            <button id="closeModal">X</button>
             <h5>Tax Calculation Result</h5>
             <p id="result"></p>
-            <button id="closeModal">Close</button>
+            
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
