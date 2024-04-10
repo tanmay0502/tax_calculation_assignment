@@ -41,7 +41,7 @@ $(document).ready(function() {
             }
         }
     
-        $('#result').html('Your calculated tax is: ₹' + (tax).toFixed(2) + '<br>' + 'Your overall income is: ₹' + (totalIncome - tax).toFixed(2));
+        $('#result').html('Your overall income is: ₹' + (totalIncome - tax) + '<br>' + 'After reducing the tax of: ₹' + tax );
         $('#resultModal').show();
     }
     
