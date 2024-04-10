@@ -41,9 +41,10 @@ $(document).ready(function() {
             }
         }
     
-        $('#result').html('Your calculated tax is: ' + (tax / 100000).toFixed(2) + ' Lakhs' + '<br>' + 'Your overall income is: ' + (totalIncome / 100000).toFixed(2) + ' Lakhs');
+        $('#result').html('Your calculated tax is: ₹' + (tax).toFixed(2) + '<br>' + 'Your overall income is: ₹' + (totalIncome - tax).toFixed(2));
         $('#resultModal').show();
     }
+    
     
 
     $('#grossIncome, #extraIncome, #deductions').on('input', function() {
