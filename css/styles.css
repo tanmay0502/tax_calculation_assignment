@@ -1,11 +1,15 @@
+html {
+    height: 100vh;
+}
+
 body {
-    font-family: 'Poppins';
-    background-color: rgb(221,229,244)
+    font-family: 'Aktiv Grotesk', sans-serif;
+    background: linear-gradient(to bottom right, #F6EAF3, #C6D4EB);
 }
 
 .container {
     background-color:rgb(241,247,254) ;
-    color: rgb(72, 67, 76);
+    color: rgb(111,113,143);
     width: 500px;
     margin: 7% auto;
     border-radius: 1.5em;
@@ -13,8 +17,14 @@ body {
     
 }
 
+.headline {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: rgb(45, 49, 66);
+}
 .form-group {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .age-group {
@@ -79,7 +89,7 @@ button {
     padding: 15px 25px;
     justify-content: end;
     margin: auto;
-    background-color: #3E4684;
+    background-color: rgb(255,51,102);
     border-radius: 2em;
     color: white;
     border: none;
@@ -88,7 +98,7 @@ button {
 }
 
 button:hover{
-    background-color: #2b3265;
+    background-color: rgb(235, 34, 84);
 }
 
 #resultModal {
