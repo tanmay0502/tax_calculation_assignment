@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculation</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tax Calculation</h1>
+        <form id="taxForm">
+            <div class="form-group">
+                <label for="grossIncome">Gross Annual Income (in Lakhs)</label>
+                <div class="input-wrapper">
+                    <input type="text" id="grossIncome" placeholder="Enter your gross annual income">
+                    <div class="error-icon" data-error="Please enter a valid income.">!</div>
+                </div>
+                <div class="invalid-feedback">Please enter a valid income.</div>
+            </div>
+            <div class="form-group">
+                <label for="extraIncome">Extra Income (in Lakhs)</label>
+                <div class="input-wrapper">
+                    <input type="text" id="extraIncome" placeholder="Enter your extra income">
+                    <div class="error-icon" data-error="Please enter a valid income.">!</div>
+                </div>
+                <div class="invalid-feedback">Please enter a valid income.</div>
+            </div>
+            <div class="form-group">
+                <label for="deductions">Total Applicable Deductions (in Lakhs)</label>
+                <div class="input-wrapper">
+                    <input type="text" id="deductions" placeholder="Enter your total applicable deductions">
+                    <div class="error-icon" data-error="Please enter a valid amount.">!</div>
+                </div>
+                <div class="invalid-feedback">Please enter a valid amount.</div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age Group</label>
+                <select id="age">
+                    <option value="">Select your age group</option>
+                    <option value="<40"><40</option>
+                    <option value="40-60">≥ 40 & < 60</option>
+                    <option value=">=60">≥ 60</option>
+                </select>
+                <div class="invalid-feedback">This field is mandatory.</div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="resultModal">
+            <h5>Tax Calculation Result</h5>
+            <p id="result"></p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/tax.js"></script>
+</body>
+
+</html>
