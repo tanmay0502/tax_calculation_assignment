@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Tax Calculation</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aktiv+Grotesk:wght@400&display=swap">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
 </head>
 
 <body>
     <div class="container">
-        <h1 class="headline">Calculate your tax</h1>
+        <h1 class="headline">Calculate Tax</h1>
         <form id="taxForm">
             <div class="form-group">
-                <label for="grossIncome">Gross Annual Income (in Lakhs)</label>
+                <label for="grossIncome">Gross Annual Income (in Lakhs)
+                    <span class="tooltip-container">
+                        <span class="question-mark">?</span>
+                        <div class="tooltip question-mark-none">Gross annual income is your total salary in the year before any deductions.</div>
+                    </span>
+                </label>
                 <div class="input-wrapper">
                     <input type="text" id="grossIncome" placeholder="Enter your gross annual income">
                     <div class="error-icon" data-error="Please enter a valid income.">!</div>
@@ -24,7 +27,12 @@
                 <div class="invalid-feedback">Please enter a valid income.</div>
             </div>
             <div class="form-group">
-                <label for="extraIncome">Extra Income (in Lakhs)</label>
+                <label for="extraIncome">Extra Income (in Lakhs)
+                    <span class="tooltip-container">
+                        <span class="question-mark">?</span>
+                        <div class="tooltip question-mark-none">Extra income refers to any additional income you receive aside from your gross annual income.</div>
+                    </span>
+                </label>
                 <div class="input-wrapper">
                     <input type="text" id="extraIncome" placeholder="Enter your extra income">
                     <div class="error-icon" data-error="Please enter a valid income.">!</div>
@@ -32,7 +40,12 @@
                 <div class="invalid-feedback">Please enter a valid income.</div>
             </div>
             <div class="form-group">
-                <label for="deductions">Total Applicable Deductions (in Lakhs)</label>
+                <label for="deductions">Total Applicable Deductions (in Lakhs)
+                    <span class="tooltip-container">
+                        <span class="question-mark">?</span>
+                        <div class="tooltip question-mark-none">Amounts subtracted from your total income, such as expenses or allowances.</div>
+                    </span>
+                </label>
                 <div class="input-wrapper">
                     <input type="text" id="deductions" placeholder="Enter your total applicable deductions">
                     <div class="error-icon" data-error="Please enter a valid amount.">!</div>
@@ -44,8 +57,8 @@
                     <label for="age">Age Group</label>
                     <select id="age">
                         <option value="">Select your age group</option>
-                        <option value="<40"><40</option>
-                        <option value="40-60">≥ 40 & < 60</option>
+                        <option value="<40">&lt;40</option>
+                        <option value="40-60">≥ 40 &amp; &lt; 60</option>
                         <option value=">=60">≥ 60</option>
                     </select>
                     <div class="invalid-feedback">This field is mandatory.</div>
