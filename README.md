@@ -39,24 +39,24 @@ https://tax-calculation-assignment.vercel.app/
 
 ## Screenshots
 
-![Shows input detail when hover over "?" (Tooltip)](screenshots/screenshot2.png)
+![Shows input detail when hover over "?" (Tooltip)](screenshots/screenshot2.png) <br>
 *Screenshot 2: Shows input detail when hover over "?" (Tooltip)*
 
-![Only positive numbers allowed](screenshots/screenshotValidIncome.png)
+![Only positive numbers allowed](screenshots/screenshotValidIncome.png) <br>
 *Screenshot 3: Only positive numbers allowed*
 
-![Cannot submit empty fields](screenshots/screenshot3.png)
+![Cannot submit empty fields](screenshots/screenshot3.png) <br>
 *Screenshot 4: Cannot submit empty fields*
 
-![Each field is required](screenshots/screenshot4.png)
+![Each field is required](screenshots/screenshot4.png) <br>
 *Screenshot 5: Each field is required*
 
-![Deductions cannot be more than total income](screenshots/screenshot5.png)
+![Deductions cannot be more than total income](screenshots/screenshot5.png) <br>
 *Screenshot 6: Deductions cannot be more than total income*
 
-![Modal display results on valid inputs](screenshots/screenshot6.png)
+![Modal display results on valid inputs](screenshots/screenshot6.png) <br>
 *Screenshot 7: Modal display results on valid inputs*
 
-![Can check last 3 calculation history](screenshots/screenshot7.png)
+![Can check last 3 calculation history](screenshots/screenshot7.png) <br>
 *Screenshot 8: Can check last 3 calculation history*
 
