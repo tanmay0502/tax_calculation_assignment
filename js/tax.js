@@ -21,15 +21,27 @@ $(document).ready(function() {
     }
 
     function calculateTax(grossIncome, extraIncome, deductions, age) {
-        if (!validateInput(grossIncome) || !validateInput(extraIncome) || !validateInput(deductions) || age === '') {
-            alert('Please fill in all fields with valid values.');
+        if (!validateInput(grossIncome)) {
+            showError($('#grossIncome'), 'Please enter a valid income.');
             return;
         }
-
+        if (!validateInput(extraIncome)) {
+            showError($('#extraIncome'), 'Please enter a valid income.');
+            return;
+        }
+        if (!validateInput(deductions)) {
+            showError($('#deductions'), 'Please enter a valid amount.');
+            return;
+        }
+        if (age === '') {
+            showError($('#age'), 'This field is mandatory.');
+            return;
+        }
+    
         grossIncome = parseFloat(grossIncome) * 100000;
         extraIncome = parseFloat(extraIncome) * 100000;
         deductions = parseFloat(deductions) * 100000;
-
+    
         var totalIncome = grossIncome + extraIncome - deductions;
         var tax = 0;
 
@@ -45,8 +57,7 @@ $(document).ready(function() {
 
         var incomeAfterTax = (totalIncome - tax).toLocaleString('en-IN');
         var taxAmount = tax.toLocaleString('en-IN');
-
-        // Store calculation details in historyData array
+    
         historyData.unshift({
             grossIncome: grossIncome.toLocaleString('en-IN'),
             extraIncome: extraIncome.toLocaleString('en-IN'),
@@ -55,12 +66,11 @@ $(document).ready(function() {
             resultTax: taxAmount,
             totalIncomeAfterTax: incomeAfterTax
         });
-
-        // Keep only the last 3 entries in historyData
+    
         if (historyData.length > 3) {
             historyData.pop();
         }
-
+    
         $('#result').html('Your overall income is: <span style="color: green">₹' + incomeAfterTax + '</span><br>' + 'After reducing the tax of: <span style="color: red">₹' + taxAmount + '</span>');
         showModal();
     }

@@ -239,3 +239,63 @@ button:hover {
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 90%;
+        margin: 5% auto;
+        padding: 1em;
+    }
+
+    .headline {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .result-head {
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 1em;
+    }
+
+    .bottom-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .age-group {
+        width: 100%;
+    }
+
+    .input-wrapper {
+        padding: 2px 5px;
+    }
+
+    input,
+    select {
+        padding: 0.5em 0.3em;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin-top: 10px;
+    }
+
+    .tooltip {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .history-item {
+        padding: 8px;
+    }
+}
