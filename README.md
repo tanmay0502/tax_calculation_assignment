@@ -2,8 +2,8 @@
 
 This is a simple web-based tax calculator application that helps users calculate their income tax based on their gross annual income, extra income, applicable deductions, and age group. The application also allows users to view their tax calculation history.
 
-![Screenshot 1](screenshots/screenshot1.png)
-*Beautiful UI inspired from Fyle website*
+![Beautiful UI inspired from Fyle website](screenshots/screenshot1.png)
+*Screenshot 1: Beautiful UI inspired from Fyle website*
 
 ## Features
 
@@ -39,24 +39,24 @@ https://tax-calculation-assignment.vercel.app/
 
 ## Screenshots
 
-![Screenshot 2](screenshots/screenshot2.png)
-*Shows input detail when hover over "?"*
+![Shows input detail when hover over "?" (Tooltip)](screenshots/screenshot2.png)
+*Screenshot 2: Shows input detail when hover over "?" (Tooltip)*
 
-![Screenshot Income](screenshots/screenshotValidIncome.png)
-*Only positive numbers allowed*
+![Only positive numbers allowed](screenshots/screenshotValidIncome.png)
+*Screenshot 3: Only positive numbers allowed*
 
-![Screenshot 3](screenshots/screenshot3.png)
-*Cannot submit empty fields*
+![Cannot submit empty fields](screenshots/screenshot3.png)
+*Screenshot 4: Cannot submit empty fields*
 
-![Screenshot 4](screenshots/screenshot4.png)
-*Each field is required*
+![Each field is required](screenshots/screenshot4.png)
+*Screenshot 5: Each field is required*
 
-![Screenshot 5](screenshots/screenshot5.png)
-*Deductions cannot be more than total income*
+![Deductions cannot be more than total income](screenshots/screenshot5.png)
+*Screenshot 6: Deductions cannot be more than total income*
 
-![Screenshot 6](screenshots/screenshot6.png)
-*Modal display results on valid inputs*
+![Modal display results on valid inputs](screenshots/screenshot6.png)
+*Screenshot 7: Modal display results on valid inputs*
 
-![Screenshot 7](screenshots/screenshot7.png)
-*Can check last 3 calculation history*
+![Can check last 3 calculation history](screenshots/screenshot7.png)
+*Screenshot 8: Can check last 3 calculation history*
 
