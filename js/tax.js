@@ -17,20 +17,20 @@ $(document).ready(function() {
     }
 
     function isNumeric(value) {
-        return !isNaN(parseFloat(value)) && isFinite(value);
+        return !isNaN(parseFloat(value)) && isFinite(value) && parseFloat(value) >= 0;
     }
 
     function calculateTax(grossIncome, extraIncome, deductions, age) {
         if (!validateInput(grossIncome)) {
-            showError($('#grossIncome'), 'Please enter a valid income.');
+            showError($('#grossIncome'));
             return;
         }
         if (!validateInput(extraIncome)) {
-            showError($('#extraIncome'), 'Please enter a valid income.');
+            showError($('#extraIncome'));
             return;
         }
         if (!validateInput(deductions)) {
-            showError($('#deductions'), 'Please enter a valid amount.');
+            showError($('#deductions'));
             return;
         }
         if (age === '') {
@@ -42,9 +42,17 @@ $(document).ready(function() {
         extraIncome = parseFloat(extraIncome) * 100000;
         deductions = parseFloat(deductions) * 100000;
     
-        var totalIncome = grossIncome + extraIncome - deductions;
+        var totalIncome = grossIncome + extraIncome;
+        
+        if (deductions > totalIncome) {
+            showError($('#deductions'), 'Expenses cannot exceed total income.');
+            return;
+        }
+    
+        totalIncome -= deductions;
+    
         var tax = 0;
-
+    
         if (totalIncome > 800000) {
             if (age === '<40') {
                 tax = 0.3 * (totalIncome - 800000);
@@ -54,7 +62,7 @@ $(document).ready(function() {
                 tax = 0.1 * (totalIncome - 800000);
             }
         }
-
+    
         var incomeAfterTax = (totalIncome - tax).toLocaleString('en-IN');
         var taxAmount = tax.toLocaleString('en-IN');
     
@@ -74,6 +82,7 @@ $(document).ready(function() {
         $('#result').html('Your overall income is: <span style="color: green">₹' + incomeAfterTax + '</span><br>' + 'After reducing the tax of: <span style="color: red">₹' + taxAmount + '</span>');
         showModal();
     }
+    
 
     $('#grossIncome, #extraIncome, #deductions').on('input', function() {
         var inputField = $(this);
