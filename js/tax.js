@@ -204,7 +204,6 @@ $(document).ready(function() {
             historyHTML += '</ul>';
         }
         $('#result').html(historyHTML);
-        $('.result-head').html("Tax Calculation History");
         showModal();
     }
 
